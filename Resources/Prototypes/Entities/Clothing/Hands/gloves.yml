@@ -257,3 +257,25 @@
       fiberMaterial: fibers-synthetic
       fiberColor: fibers-black
     - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ElectroInsulatedGloves
+  name: insulated gloves
+  description: These gloves will protect the wearer from electric shocks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Hands/Gloves/Color/yellow.rsi
+    - type: Clothing
+      sprite: Clothing/Hands/Gloves/Color/yellow.rsi
+    - type: GloveHeatResistance
+      heatResistance: 1400
+    - type: Insulated
+    - type: Fiber
+      fiberMaterial: fibers-insulative
+      fiberColor: fibers-yellow
+    - type: FingerprintMask
+    - type: PowerCellSlot
+      cellSlotId: cell_slot
+    - type: ElectroGloves
+      energyPerUse: 100
