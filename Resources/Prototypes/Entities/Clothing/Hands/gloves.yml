@@ -261,6 +261,7 @@
 - type: entity
   parent: ClothingHandsBase
   id: ElectroInsulatedGloves
+  suffix: Electro
   name: insulated gloves
   description: These gloves will protect the wearer from electric shocks.
   components:
@@ -275,7 +276,23 @@
       fiberMaterial: fibers-insulative
       fiberColor: fibers-yellow
     - type: FingerprintMask
+    - type: ContainerContainer
+      containers:
+          cell_slot: !type:ContainerSlot {}
     - type: PowerCellSlot
       cellSlotId: cell_slot
+    - type: ItemSlots
+      slots:
+        cell_slot:
+            name: power-cell-slot-component-slot-name-default
+            startingItem: PowerCellMedium
     - type: ElectroGloves
       energyPerUse: 100
+    - type: DisarmMalus
+      malus: 0.225
+    - type: StaminaDamageOnHit
+      damage: 55
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 1
